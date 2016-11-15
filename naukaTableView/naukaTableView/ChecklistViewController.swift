@@ -13,6 +13,8 @@ class ChecklistViewController: UITableViewController {
     
     var items: [ChecklistItem]
     
+    
+    
     required init?(coder aDecoder: NSCoder) {
         
         items = [ChecklistItem]()
@@ -49,7 +51,7 @@ class ChecklistViewController: UITableViewController {
         
         let row6item = ChecklistItem()
         row6item.text = "Sleeping"
-        row6item.checked = true
+        row6item.checked = false
         items.append(row6item)
         
         let row7item = ChecklistItem()
@@ -64,7 +66,7 @@ class ChecklistViewController: UITableViewController {
         
         let row9item = ChecklistItem()
         row9item.text = "Dreaming"
-        row9item.checked = true
+        row9item.checked = false
         items.append(row9item)
         
         let row10item = ChecklistItem()
@@ -79,7 +81,7 @@ class ChecklistViewController: UITableViewController {
         
         let row12item = ChecklistItem()
         row12item.text = "Be patient"
-        row12item.checked = true
+        row12item.checked = false
         items.append(row12item)
         
         let row13item = ChecklistItem()
@@ -90,6 +92,22 @@ class ChecklistViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
     
+//MARK: Outlets and Actions
+    
+    @IBAction func addItem() {
+        let newRowIndex = items.count
+        
+        let item = ChecklistItem()
+        item.text = "I am a new row"
+        item.checked = false
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+    }
+    
+//MARK: TableView methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -112,6 +130,14 @@ class ChecklistViewController: UITableViewController {
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        items.remove(at: indexPath.row)
+        let indexPaths = [indexPath]
+        tableView.deleteRows(at: indexPaths, with: .automatic)
+    }
+    
+//MARK: Random functions
     
     func configureCheckark(for cell: UITableViewCell, with item: ChecklistItem) {
         if item.checked {
