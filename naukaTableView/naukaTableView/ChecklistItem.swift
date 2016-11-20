@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class ChecklistItem {
+    var text = ""
+    var checked = true
+    
+    func toggleCheckmark() {
+        checked = !checked
+    }
+}
