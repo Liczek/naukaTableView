@@ -12,6 +12,7 @@ import UIKit
 protocol AddItemViewControllerDelegate: class {
     func addItemViewControllerCancel(_ controller: UITableViewController)
     func addItemViewController(_ controller: UITableViewController, didFinishAdding item: ChecklistItem)
+    func addItemViewController(_ controller: UITableViewController, didFinishEditing item: ChecklistItem)
 }
 
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
@@ -21,6 +22,17 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     
     weak var delegate: AddItemViewControllerDelegate?
     
+    var itemToEdit: ChecklistItem?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let item = itemToEdit {
+            title = "Edit Item"
+            textField.text = item.text
+            doneBarButton.isEnabled = true
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,10 +51,16 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func done() {
         
+        if let item = itemToEdit {
+            item.text = textField.text!
+            delegate?.addItemViewController(self, didFinishEditing: item)
+        } else {
+        
         let item = ChecklistItem()
         item.text = textField.text!
         item.checked = true
-        delegate?.addItemViewController(self, didFinishAdding: item)
+            delegate?.addItemViewController(self, didFinishAdding: item)
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
