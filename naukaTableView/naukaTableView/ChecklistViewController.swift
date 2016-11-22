@@ -83,11 +83,11 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
         let label = cell.viewWithTag(1001) as! UILabel
         if item.checked {
-            label.text = "✔"
-            label.textColor = UIColor.green
+            label.text = "✅"
+            
         } else {
-            label.text = "V"
-            label.textColor = UIColor.lightGray
+            label.text = "☑️"
+            
         }
     }
     
