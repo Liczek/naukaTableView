@@ -12,6 +12,7 @@ import UIKit
 class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
     
     var items: [ChecklistItem]
+    var checklist: Checklist!
     
     
     
@@ -21,6 +22,11 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         
         super.init(coder: aDecoder)
         loadChecklistItems()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = checklist.name
     }
     
     
