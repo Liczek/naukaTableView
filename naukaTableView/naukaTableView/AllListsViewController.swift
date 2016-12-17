@@ -16,23 +16,19 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         
         lists = [Checklist]()
         
-        var list = Checklist(name: "Birthdays")
-        lists.append(list)
-        
-        list = Checklist(name: "Groceries")
-        lists.append(list)
-        
-        list = Checklist(name: "Cool Apps")
-        lists.append(list)
-        
-        list = Checklist(name: "To Do")
-        lists.append(list)
-        
         super.init(coder: aDecoder)
+        loadChecklists()
+        
+//        for list in lists {
+//            let item = ChecklistItem()
+//            item.text = "Item for \(list.name)"
+//            list.items.append(item)
+//        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(documentDirectory())
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -131,5 +127,35 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
             }
         }
         dismiss(animated: true, completion: nil)
+    }
+    
+//MARK: Document Directory and Path
+    
+    func documentDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func dataFilePath() -> URL {
+        return documentDirectory().appendingPathComponent("Checklist.plist")
+    }
+    
+//MARK: Save and Load Checklists
+    
+    func saveChecklists() {
+        let data = NSMutableData()
+        let archiver = NSKeyedArchiver(forWritingWith: data)
+        archiver.encode(lists, forKey: "Checklists")
+        archiver.finishEncoding()
+        data.write(to: dataFilePath(), atomically: true)
+    }
+    
+    func loadChecklists() {
+        let path = dataFilePath()
+        if let data = try? Data(contentsOf: path){
+            let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
+            lists = unarchiver.decodeObject(forKey: "Checklists") as! [Checklist]
+            unarchiver.finishDecoding()
+        }
     }
 }

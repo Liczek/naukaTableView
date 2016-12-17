@@ -41,6 +41,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
         textField.becomeFirstResponder()
         textField.enablesReturnKeyAutomatically = true
         textField.returnKeyType = .done
+        textField.autocapitalizationType = .sentences   
         doneBarButton.isEnabled = false
         
     }

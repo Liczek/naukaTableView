@@ -32,10 +32,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
             textField.text = checklist.name
             title = "Edit Checklist Name"
             doneBarButton.isEnabled = false
-        }
-        
-        
-        
+        } 
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +42,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
         textField.returnKeyType = .done
         textField.enablesReturnKeyAutomatically = true
         textField.becomeFirstResponder()
+        textField.autocapitalizationType = .sentences
         doneBarButton.isEnabled = false
         
     }
