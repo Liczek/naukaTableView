@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8470A621E05A0AE00E5EEC4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8470A611E05A0AE00E5EEC4 /* DataModel.swift */; };
 		C85CEF641DDA36AE002EA261 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85CEF631DDA36AE002EA261 /* ChecklistViewController.swift */; };
 		C85CEF661DDA5950002EA261 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85CEF651DDA5950002EA261 /* ChecklistItem.swift */; };
 		C88D79E21DDE469800AF17D5 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D79E11DDE469800AF17D5 /* AddItemViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8470A611E05A0AE00E5EEC4 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		C85CEF631DDA36AE002EA261 /* ChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		C85CEF651DDA5950002EA261 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		C88D79E11DDE469800AF17D5 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				C8F3D0B31DD908A800D8E97E /* AppDelegate.swift */,
 				C8E45D4C1DF498E00031E4D7 /* AllListsViewController.swift */,
+				C8470A611E05A0AE00E5EEC4 /* DataModel.swift */,
 				C8D29F7E1DF71D0700B32BAA /* ListDetailViewController.swift */,
 				C8E45D4E1DF49EF60031E4D7 /* Checklist.swift */,
 				C85CEF631DDA36AE002EA261 /* ChecklistViewController.swift */,
@@ -157,6 +160,7 @@
 				C88D79E21DDE469800AF17D5 /* AddItemViewController.swift in Sources */,
 				C8E45D4F1DF49EF60031E4D7 /* Checklist.swift in Sources */,
 				C85CEF661DDA5950002EA261 /* ChecklistItem.swift in Sources */,
+				C8470A621E05A0AE00E5EEC4 /* DataModel.swift in Sources */,
 				C8E45D4D1DF498E00031E4D7 /* AllListsViewController.swift in Sources */,
 				C85CEF641DDA36AE002EA261 /* ChecklistViewController.swift in Sources */,
 			);
