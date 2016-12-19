@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C87248F21E0852E90091B065 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87248F11E0852E90091B065 /* AllListsViewController.swift */; };
+		C87248F41E0853320091B065 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87248F31E0853320091B065 /* Checklist.swift */; };
+		C87248F61E085C570091B065 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87248F51E085C570091B065 /* ListDetailViewController.swift */; };
+		C87248F81E08768C0091B065 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87248F71E08768C0091B065 /* DataModel.swift */; };
 		C89006231DE4E06D00863173 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006221DE4E06D00863173 /* ChecklistViewController.swift */; };
 		C89006251DE4E07800863173 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006241DE4E07800863173 /* ChecklistItem.swift */; };
 		C89006271DE4E9CB00863173 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006261DE4E9CB00863173 /* AddItemViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C87248F11E0852E90091B065 /* AllListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
+		C87248F31E0853320091B065 /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		C87248F51E085C570091B065 /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		C87248F71E08768C0091B065 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		C89006221DE4E06D00863173 /* ChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		C89006241DE4E07800863173 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		C89006261DE4E9CB00863173 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				C8F3D0B31DD908A800D8E97E /* AppDelegate.swift */,
+				C87248F71E08768C0091B065 /* DataModel.swift */,
+				C87248F11E0852E90091B065 /* AllListsViewController.swift */,
+				C87248F51E085C570091B065 /* ListDetailViewController.swift */,
+				C87248F31E0853320091B065 /* Checklist.swift */,
 				C89006221DE4E06D00863173 /* ChecklistViewController.swift */,
 				C89006241DE4E07800863173 /* ChecklistItem.swift */,
 				C89006261DE4E9CB00863173 /* AddItemViewController.swift */,
@@ -97,7 +109,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Paweł Liczmański";
 				TargetAttributes = {
 					C8F3D0AF1DD908A700D8E97E = {
@@ -144,8 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8F3D0B41DD908A800D8E97E /* AppDelegate.swift in Sources */,
+				C87248F61E085C570091B065 /* ListDetailViewController.swift in Sources */,
 				C89006271DE4E9CB00863173 /* AddItemViewController.swift in Sources */,
+				C87248F41E0853320091B065 /* Checklist.swift in Sources */,
 				C89006251DE4E07800863173 /* ChecklistItem.swift in Sources */,
+				C87248F81E08768C0091B065 /* DataModel.swift in Sources */,
+				C87248F21E0852E90091B065 /* AllListsViewController.swift in Sources */,
 				C89006231DE4E06D00863173 /* ChecklistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +206,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -239,6 +256,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
