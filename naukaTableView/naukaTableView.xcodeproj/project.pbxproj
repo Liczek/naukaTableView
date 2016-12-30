@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C85811D61E15AFE9009B1BD2 /* AllListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85811D51E15AFE9009B1BD2 /* AllListViewController.swift */; };
+		C85811D81E15AFF4009B1BD2 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85811D71E15AFF4009B1BD2 /* Checklist.swift */; };
 		C869539E1DF07E87007B43DA /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C869539D1DF07E87007B43DA /* ChecklistViewController.swift */; };
 		C86953A01DF07E94007B43DA /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C869539F1DF07E94007B43DA /* ChecklistItem.swift */; };
 		C86953A21DF08645007B43DA /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86953A11DF08645007B43DA /* AddItemViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C85811D51E15AFE9009B1BD2 /* AllListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListViewController.swift; sourceTree = "<group>"; };
+		C85811D71E15AFF4009B1BD2 /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		C869539D1DF07E87007B43DA /* ChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		C869539F1DF07E94007B43DA /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		C86953A11DF08645007B43DA /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				C8F3D0B31DD908A800D8E97E /* AppDelegate.swift */,
+				C85811D51E15AFE9009B1BD2 /* AllListViewController.swift */,
+				C85811D71E15AFF4009B1BD2 /* Checklist.swift */,
 				C869539D1DF07E87007B43DA /* ChecklistViewController.swift */,
 				C869539F1DF07E94007B43DA /* ChecklistItem.swift */,
 				C86953A11DF08645007B43DA /* AddItemViewController.swift */,
@@ -97,7 +103,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Paweł Liczmański";
 				TargetAttributes = {
 					C8F3D0AF1DD908A700D8E97E = {
@@ -145,6 +151,8 @@
 			files = (
 				C8F3D0B41DD908A800D8E97E /* AppDelegate.swift in Sources */,
 				C86953A21DF08645007B43DA /* AddItemViewController.swift in Sources */,
+				C85811D81E15AFF4009B1BD2 /* Checklist.swift in Sources */,
+				C85811D61E15AFE9009B1BD2 /* AllListViewController.swift in Sources */,
 				C86953A01DF07E94007B43DA /* ChecklistItem.swift in Sources */,
 				C869539E1DF07E87007B43DA /* ChecklistViewController.swift in Sources */,
 			);
@@ -190,6 +198,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -212,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -239,6 +248,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -255,7 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

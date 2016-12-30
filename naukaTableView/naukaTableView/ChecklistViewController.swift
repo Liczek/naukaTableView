@@ -12,6 +12,7 @@ import UIKit
 class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
     
     var items: [ChecklistItem]
+    var checklist: Checklist!
     
     required init?(coder aDecoder: NSCoder) {
         
