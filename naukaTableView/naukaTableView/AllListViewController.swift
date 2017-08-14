@@ -13,10 +13,7 @@ class AllListViewController: UITableViewController {
     
     let lists = [Checklist]()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Checklists"
-    }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lists.count
